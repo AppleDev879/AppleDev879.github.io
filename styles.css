@@ -193,7 +193,7 @@ nav > ul {
 }
 
 .section-container {
-  margin: 0 10%;
+  padding: 1em 10% 0em 10%;
 }
 
 /* Bio */
@@ -205,19 +205,45 @@ nav > ul {
 
 /* Experience */
 
+.experience {
+  background-color: hsla(0, 0%, 100%, 0.041);
+  height: 800px;
+}
+
+.experience table {
+  border-collapse: separate;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-name {
+  text-transform: capitalize;
+  margin-left: 1em;
+}
+
+.job-date {
+  vertical-align: top;
+  font-weight: lighter;
+}
+
 .job-desc-list {
   list-style: none;
+  font-size: 1.2em;
 }
 
 li * {
   display: inline;
 }
 
-ul li::before {
+li > p {
+  line-height: 1.75em;
+}
+
+.experience ul li::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: red; /* Change the color */
+  color: #fefefe; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.3em; /* Also needed for space (tweak if needed) */
 }
