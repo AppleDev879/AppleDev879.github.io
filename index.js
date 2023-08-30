@@ -1,4 +1,5 @@
 import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+import "https://unpkg.com/typewriter-effect@latest/dist/core.js";
 
 $(document).ready(function () {
   // Add smooth scrolling to all links
@@ -25,4 +26,17 @@ $(document).ready(function () {
       );
     } // End if
   });
+
+  var typeSpan = document.getElementById("typed");
+  var typewriter = new Typewriter(typeSpan, {
+    loop: false,
+    delay: 75,
+  });
+
+  typewriter
+    .pauseFor(2500)
+    .typeString(
+      "I am a multi-talented <strong><span style='color: #27ae60;'>software engineer</span></strong>."
+    )
+    .start();
 });
