@@ -224,6 +224,7 @@ nav > ul {
 .job-date {
   vertical-align: top;
   font-weight: lighter;
+  width: 30%;
 }
 
 .job-desc-list {

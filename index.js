@@ -1,57 +1,28 @@
-// gsap.set(".andrew-barrett", { autoAlpha: 0 });
+import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 
-// function marketingAnimation() {
-//   let tl = gsap.timeline({
-//     defaults: { duration: 0.3, ease: Linear.easeNone },
-//   });
-//   tl.to(".andrew-barrett", { autoAlpha: 1 })
-//     .fromTo(
-//       ".andrew-barrett #mask-A",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
-//     .fromTo(
-//       ".andrew-barrett #mask-n",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
-//     .fromTo(
-//       ".andrew-barrett #mask-d",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
-//     .fromTo(
-//       ".andrew-barrett #mask-r",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
-//     .fromTo(
-//       ".andrew-barrett #mask-e",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
-//     .fromTo(
-//       ".andrew-barrett #mask-w",
-//       {
-//         drawSVG: "0% 0%",
-//       },
-//       { drawSVG: true }
-//     )
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on("click", function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-//     .to(".andrew-barrett", { autoAlpha: 0 }, "+=0.18");
-//   return tl;
-// }
+      // Store hash
+      var hash = this.hash;
 
-// window.onload = function () {
-//   marketingAnimation();
-// };
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        600,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
+    } // End if
+  });
+});
