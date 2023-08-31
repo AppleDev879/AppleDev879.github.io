@@ -1,0 +1,135 @@
+/* Hero */
+
+.hero {
+  height: 65vh;
+}
+
+.spaced-letters {
+  letter-spacing: 0.1em;
+}
+
+.hero-left {
+  margin-left: 10%;
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 2rem;
+  margin-top: 15%;
+  margin-bottom: 1.5em;
+}
+
+.hero-name {
+  font-size: 4.5rem;
+  font-weight: lighter;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.hero-i-am {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-top: 1.5em;
+}
+
+.hero-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 1.5em 2em;
+  margin-top: 2em;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-button:link {
+  text-decoration: none;
+}
+
+.hero-button:visited {
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  text-decoration: none;
+}
+
+.hero-button:active {
+  text-decoration: none;
+}
+
+.mask {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.andrew-barrett .mask {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+/* Animation the stroke-dashoffset to a zero length */
+@keyframes strokeOffset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+:root {
+  --letter-duration: 1s;
+}
+
+/* Apply the animation to each mask */
+#mask-A {
+  animation: strokeOffset var(--letter-duration) linear forwards;
+}
+
+#mask-n1 {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.25s;
+}
+
+#mask-n2 {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.3s;
+}
+
+#mask-d {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.4s;
+}
+
+#mask-r {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.6s;
+}
+
+#mask-e1 {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.7s;
+}
+#mask-w {
+  animation: strokeOffset var(--letter-duration) linear forwards 0.8s;
+}
+#mask-b {
+  animation: strokeOffset var(--letter-duration) linear forwards 1s;
+}
+#mask-a-2 {
+  animation: strokeOffset var(--letter-duration) linear forwards 1.4s;
+}
+
+#mask-barrett-r-1 {
+  animation: strokeOffset var(--letter-duration) linear forwards 1.6s;
+}
+#mask-barrett-r-2 {
+  animation: strokeOffset var(--letter-duration) linear forwards 1.75s;
+}
+#mask-e-2 {
+  animation: strokeOffset var(--letter-duration) linear forwards 1.9s;
+}
+#mask-barrett-t {
+  animation: strokeOffset var(--letter-duration) linear forwards 2s;
+}
+#mask-barrett-t-line-v {
+  animation: strokeOffset var(--letter-duration) linear forwards 2.2s;
+}
