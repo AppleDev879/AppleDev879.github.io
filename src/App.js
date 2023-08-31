@@ -1,6 +1,7 @@
 import SiteNav from "./components/nav/SiteNav";
 import Hero from "./components/hero/Hero";
 import Experience from "./components/experience/Experience";
+import Languages from "./components/languages/Languages";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Hero />
         <Experience />
+        <Languages />
       </main>
     </div>
   );
