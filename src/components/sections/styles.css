@@ -1,0 +1,10 @@
+/* Sections */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.section-container {
+  padding: 5% 10% 0em 10%;
+}
