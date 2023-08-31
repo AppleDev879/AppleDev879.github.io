@@ -1,4 +1,10 @@
 import "./styles.css";
 export default function Item({ language }) {
-  return <li className="grid-item">{language.name}</li>;
+  let itemComps = [
+    <img className="lang-img" src={language.photo_url} alt="" />,
+  ];
+  if (language.display_name) {
+    itemComps.push(<p className="lang-title">{language.name}</p>);
+  }
+  return <div className="grid-item">{itemComps}</div>;
 }
