@@ -1,11 +1,49 @@
 import "./styles.css";
+import React from "react";
+import { Link } from "react-scroll";
+import Typewriter from "typewriter-effect";
+import { useState } from "react";
+
+// export default class Hero extends React.Component {
+//   //   componentDidMount() {
+//   //     // setTimeout(function () {
+//   //     //   let typewriterBot = new Typewriter("#typed", {
+//   //     //     loop: false,
+//   //     //     delay: 30,
+//   //     //   });
+//   //     //   typewriterBot
+//   //     //     .typeString("I'm a multi-talented <strong>software engineer</strong>")
+//   //     //     .pauseFor(1000)
+//   //     //     .deleteChars(17)
+//   //     //     .typeString("<strong>engineering leader</strong>")
+//   //     //     .pauseFor(1000)
+//   //     //     .deleteChars(19)
+//   //     //     .typeString("<strong>relentless learner</strong>")
+//   //     //     .start();
+//   //     // }, 3200);
+//   //   }
 export default function Hero() {
+  const disableTypewriterCursor = (className) =>
+    (document.getElementsByClassName(className)[0].style.visibility = "hidden");
   return (
     <section>
       <div className="hero">
-        <h1 className="hero-greeting hero-left spaced-letters">
-          Hello, World! My name is
-        </h1>
+        <div className="hero-left">
+          <h2>
+            <Typewriter
+              options={{ delay: 30, cursorClassName: "typewriter-cursor-top" }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Hello World! My name is")
+                  .callFunction(() => {
+                    console.log("String typed out!");
+                    disableTypewriterCursor("typewriter-cursor-top");
+                  })
+                  .start();
+              }}
+            />
+          </h2>
+        </div>
         <svg
           className="andrew-barrett hero-left"
           id="Andrew_Barrett"
@@ -270,12 +308,39 @@ export default function Hero() {
           </g>
         </svg>
         <h3 id="typed" className="hero-left hero-i-am">
-          Text
+          <Typewriter
+            options={{ delay: 30, cursorClassName: "typewriter-cursor-bot" }}
+            onInit={(typewriter) => {
+              typewriter
+                .pauseFor(4000)
+                .callFunction(() => {
+                  disableTypewriterCursor("typewriter-cursor-top");
+                  document.getElementsByClassName(
+                    "typewriter-cursor-bot"
+                  )[0].style.visibility = "visible";
+                })
+                .typeString(
+                  "I'm a multi-talented <strong>software engineer</strong>"
+                )
+                .pauseFor(1000)
+                .deleteChars(17)
+                .typeString("<strong>engineering leader</strong>")
+                .pauseFor(1000)
+                .deleteChars(19)
+                .typeString("<strong>relentless learner</strong>")
+                .start();
+            }}
+          />
         </h3>
         <br />
-        <a href="#experience" className="hero-button hero-left">
+        <Link
+          to="experience"
+          smooth={true}
+          duration={500}
+          className="hero-button hero-left"
+        >
           See my work
-        </a>
+        </Link>
       </div>
     </section>
   );

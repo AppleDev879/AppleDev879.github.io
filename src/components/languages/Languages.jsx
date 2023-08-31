@@ -22,7 +22,7 @@ export default class Languages extends React.Component {
           <h1 className="section-title">Programming Languages</h1>
           <div className="grid-container">
             {this.state.langs.map((lang) => (
-              <Item language={lang} />
+              <Item key={lang.name} language={lang} />
             ))}
           </div>
         </div>

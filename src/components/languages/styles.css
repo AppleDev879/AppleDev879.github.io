@@ -7,13 +7,10 @@
   display: grid;
   gap: 100px 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #2196f3;
   padding: 10px;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 0.5em;
   font-size: 2em;
   text-align: center;
@@ -23,14 +20,18 @@
 }
 
 .lang-img {
-  color: gray;
   object-fit: contain;
-  max-width: 15vw;
-  max-height: 100%;
+  max-width: 6vw;
+  max-height: 10vh;
+  filter: grayscale(100%);
+  padding-right: 1em;
+}
+
+.lang-img:hover {
+  filter: none;
 }
 
 .lang-title {
   display: inline;
   margin: auto;
-  color: black;
 }
