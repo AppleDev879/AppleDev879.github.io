@@ -11,7 +11,6 @@ function App() {
       </header>
       <main>
         <Hero />
-        <Experience />
         <Languages />
       </main>
     </div>
