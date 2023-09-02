@@ -8,11 +8,15 @@ export default class Languages extends React.Component {
   state = {
     langs: [],
   };
+
+  API_URL = "https://api.abarrett.io";
   componentDidMount() {
-    axios.get(`${process.env.REACT_APP_API_URL}/languages`).then((res) => {
-      const langs = res.data;
-      this.setState({ langs });
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL || this.API_URL}/languages`)
+      .then((res) => {
+        const langs = res.data;
+        this.setState({ langs });
+      });
   }
 
   render() {
