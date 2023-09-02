@@ -2,7 +2,6 @@ import "./styles.css";
 import React from "react";
 import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
-import { useState } from "react";
 
 // export default class Hero extends React.Component {
 //   //   componentDidMount() {
