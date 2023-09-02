@@ -1,0 +1,37 @@
+.languages {
+  background-color: hsla(0, 0%, 100%, 0.041);
+  height: 800px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 100px 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 0.5em;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  max-height: 10vh;
+}
+
+.lang-img {
+  object-fit: contain;
+  max-width: 6vw;
+  max-height: 10vh;
+  filter: grayscale(100%);
+  padding-right: 1em;
+}
+
+.lang-img:hover {
+  filter: none;
+}
+
+.lang-title {
+  display: inline;
+  margin: auto;
+}
