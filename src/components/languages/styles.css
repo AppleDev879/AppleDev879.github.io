@@ -1,6 +1,10 @@
 .languages {
   background-color: hsla(0, 0%, 100%, 0.041);
-  height: 800px;
+  height: 35vh;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .grid-container {
