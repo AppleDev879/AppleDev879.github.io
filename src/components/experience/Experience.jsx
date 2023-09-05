@@ -48,9 +48,7 @@ export default function Experience() {
                 <h2>May 2022-July 2022</h2>
               </td>
               <td>
-                <h2 className="job-name">
-                  Software Engineer I, PeopleStrategy
-                </h2>
+                <h2 className="job-name">Intern, PeopleStrategy</h2>
                 <ul className="job-desc-list">
                   <li>
                     <p>
