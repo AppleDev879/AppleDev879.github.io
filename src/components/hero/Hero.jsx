@@ -323,9 +323,9 @@ export default function Hero() {
                 )
                 .pauseFor(1000)
                 .deleteChars(17)
-                .typeString("<strong>engineering leader</strong>")
+                .typeString("<strong>app developer</strong>")
                 .pauseFor(1000)
-                .deleteChars(19)
+                .deleteChars(14)
                 .typeString("<strong>relentless learner</strong>")
                 .start();
             }}
