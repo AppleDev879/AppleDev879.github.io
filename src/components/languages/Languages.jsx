@@ -1,36 +1,32 @@
 import "../sections/styles.css";
 import "./styles.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Item from "./Item";
 
-export default class Languages extends React.Component {
-  state = {
-    langs: [],
-  };
+export default function Languages() {
+  const [langs, setLangs] = useState([]);
 
-  componentDidMount() {
+  useEffect(() => {
     const API_URL = "https://api.abarrett.io";
     axios
       .get(`${process.env.REACT_APP_API_URL || API_URL}/languages`)
       .then((res) => {
         const langs = res.data;
-        this.setState({ langs });
+        setLangs(langs);
       });
-  }
+  }, []);
 
-  render() {
-    return (
-      <section id="languages" className="languages">
-        <div className="section-container">
-          <h1 className="section-title">Programming Languages</h1>
-          <div className="grid-container">
-            {this.state.langs.map((lang) => (
-              <Item key={lang.name} language={lang} />
-            ))}
-          </div>
+  return (
+    <section id="languages" className="languages">
+      <div className="section-container">
+        <h1 className="section-title">Programming Languages</h1>
+        <div className="grid-container">
+          {langs.map((lang) => (
+            <Item key={lang.name} language={lang} />
+          ))}
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }

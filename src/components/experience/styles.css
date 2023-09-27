@@ -1,12 +1,5 @@
-/* Experience */
-
-* {
+Experience * {
   box-sizing: border-box;
-}
-
-.experience {
-  background-color: hsla(0, 0%, 100%, 0.041);
-  height: 35vh;
 }
 
 .experience table {

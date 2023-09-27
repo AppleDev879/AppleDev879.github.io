@@ -9,9 +9,13 @@
 
 .grid-container {
   display: grid;
-  gap: 100px 10px;
+  gap: 1rem 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 10px;
+  /* padding: 1rem; */
+  /* Set maximum width for large screens */
+  max-width: 50%; /* Adjust as needed */
+  margin: 0 auto; /* Center align the container */
+  /* border: 5px red solid; */
 }
 
 .grid-item {
@@ -19,16 +23,19 @@
   font-size: 2em;
   text-align: center;
   display: flex;
-  justify-content: center;
+  align-items: center; /* Center items vertically within the grid item */
   max-height: 10vh;
+  border: 3px grey solid;
+  border-radius: 25px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .lang-img {
   object-fit: contain;
-  max-width: 6vw;
-  max-height: 10vh;
+  width: 80px; /* Adjust image width as needed */
   filter: grayscale(100%);
-  padding-right: 1em;
+  margin-right: 3rem; /* Adjust margin to control spacing between image and title */
 }
 
 .lang-img:hover {
@@ -37,5 +44,49 @@
 
 .lang-title {
   display: inline;
-  margin: auto;
+  margin: 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  /* Adjust for small screens like mobile devices */
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    gap: 10px; /* Adjust gap as needed for small screens */
+    max-width: 100%; /* Full width on small screens */
+  }
+  .lang-img {
+    width: 80px;
+    margin: 0 auto;
+  }
+  .lang-title {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust for iPad-sized screens */
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns on iPad screens */
+    gap: 20px; /* Adjust gap as needed for iPad screens */
+    max-width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 2272px) {
+  /* Adjust for large screens */
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr; /* 4 columns for large screens */
+    gap: 60px 10px; /* Default gap for large screens */
+    max-width: 100%; /* Maximum width for large screens */
+  }
+}
+
+@media (min-width: 2273px) {
+  /* Adjust for large screens */
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for large screens */
+    gap: 100px 10px; /* Default gap for large screens */
+    max-width: 2273px; /* Maximum width for large screens */
+  }
 }
