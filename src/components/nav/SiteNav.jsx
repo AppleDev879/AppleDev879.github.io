@@ -10,11 +10,13 @@ export default function SiteNav() {
           </Link>
         </li>
         <li className="nav-item">
-          <a href="#skills">Skills</a>
+          <Link to="languages" smooth={true} duration={500}>
+            Skills
+          </Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a href="#projects">Projects</a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

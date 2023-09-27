@@ -13,10 +13,21 @@ Experience * {
   margin-left: 1em;
 }
 
-.job-date {
+.job-date-col {
   vertical-align: top;
-  font-weight: lighter;
   width: 30%;
+  display: none;
+  margin-right: 2em;
+  padding-top: 0.5em;
+}
+
+.job-date-large {
+  font-weight: lighter;
+}
+
+.job-date-mobile {
+  margin-left: 1.3em;
+  font-weight: lighter;
 }
 
 .job-desc-list {
@@ -39,4 +50,14 @@ li > p {
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1.3em; /* Also needed for space (tweak if needed) */
+}
+
+@media (min-width: 769px) {
+  .job-date-mobile {
+    display: none;
+  }
+  .job-date-col {
+    width: 100%;
+    display: block;
+  }
 }

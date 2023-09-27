@@ -8,13 +8,14 @@ export default function Experience() {
         <table className="no-border-table">
           <tbody>
             <tr>
-              <td className="job-date">
-                <h2>July 2022-July 2023</h2>
+              <td className="job-date-col">
+                <h3 className="job-date-large">July 2022-July 2023</h3>
               </td>
               <td>
                 <h2 className="job-name">
                   Software Engineer I, PeopleStrategy
                 </h2>
+                <h3 className="job-date-mobile">July 2022-July 2023</h3>
                 <ul className="job-desc-list">
                   <li>
                     <p>
@@ -44,11 +45,12 @@ export default function Experience() {
               </td>
             </tr>
             <tr>
-              <td className="job-date">
-                <h2>May 2022-July 2022</h2>
+              <td className="job-date-col">
+                <h3 className="job-date-large">May 2022-July 2022</h3>
               </td>
               <td>
                 <h2 className="job-name">Intern, PeopleStrategy</h2>
+                <h3 className="job-date-mobile">May 2022-July 2022</h3>
                 <ul className="job-desc-list">
                   <li>
                     <p>

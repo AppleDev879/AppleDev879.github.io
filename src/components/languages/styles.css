@@ -24,27 +24,28 @@
   text-align: center;
   display: flex;
   align-items: center; /* Center items vertically within the grid item */
-  max-height: 10vh;
   border: 3px grey solid;
   border-radius: 25px;
   max-width: 100%;
   overflow: hidden;
+  filter: grayscale(100%);
+}
+
+.grid-item:hover {
+  filter: none;
+  border-color: aqua;
 }
 
 .lang-img {
   object-fit: contain;
   width: 80px; /* Adjust image width as needed */
-  filter: grayscale(100%);
   margin-right: 3rem; /* Adjust margin to control spacing between image and title */
-}
-
-.lang-img:hover {
-  filter: none;
 }
 
 .lang-title {
   display: inline;
   margin: 0;
+  cursor: default;
 }
 
 /* Media queries */
