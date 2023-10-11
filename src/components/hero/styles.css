@@ -1,36 +1,38 @@
 /* Hero */
-
-.hero {
-  height: 65vh;
+:root {
+  --hero-height: 100vh;
+}
+.hero-container {
+  background-image: url("https://abarrett-io.nyc3.cdn.digitaloceanspaces.com/hero/Andrew%20Barrett%20Color%201080p.jpg");
+  width: 100vw; /* Use appropriate dimensions */
+  height: var(--hero-height);
+  /* Use appropriate dimensions */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.spaced-letters {
-  letter-spacing: 0.1em;
+.hero-content {
+  z-index: 1;
+}
+
+.signature-container {
+  height: 15vh;
+  width: auto;
+  margin-bottom: 4vh;
+}
+
+.site-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .hero-left {
   margin-left: 10%;
-}
-
-.hero-greeting {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  line-height: 2rem;
-  margin-top: 15%;
-  margin-bottom: 1.5em;
-}
-
-.hero-name {
-  font-size: 4.5rem;
-  font-weight: lighter;
-  margin-top: 0em;
-  margin-bottom: 0em;
-}
-
-.hero-i-am {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  margin-top: 1.5em;
 }
 
 .hero-button {
@@ -39,7 +41,6 @@
   border: none;
   border-radius: 5px;
   padding: 1.5em 2em;
-  margin-top: 2em;
   font-size: small;
   font-weight: bold;
   text-transform: uppercase;
@@ -73,6 +74,11 @@
   stroke-miterlimit: 10;
 }
 
+.andrew-barrett {
+  height: 100%;
+  display: block;
+}
+
 /* Animation the stroke-dashoffset to a zero length */
 @keyframes strokeOffset {
   to {
@@ -82,7 +88,7 @@
 
 :root {
   --letter-duration: 1s;
-  --delay: 1.2s;
+  --delay: 0s;
 }
 
 /* Apply the animation to each mask */
@@ -148,60 +154,32 @@
     calc(var(--delay) + 2.2s);
 }
 
-/* Typewriter */
-.typewriter-cursor-top {
-  -webkit-animation: Typewriter-cursor 1s infinite;
-  animation: Typewriter-cursor 1s infinite;
-  margin-left: 1px;
-}
-@-webkit-keyframes Typewriter-cursor {
-  0% {
+@-webkit-keyframes fade-in-animation {
+  from {
     opacity: 0;
   }
-  50% {
+  to {
     opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
 }
-@keyframes Typewriter-cursor {
-  0% {
+@keyframes fade-in-animation {
+  from {
     opacity: 0;
   }
-  50% {
+  to {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
-.typewriter-cursor-bot {
-  -webkit-animation: Typewriter-cursor 1s infinite;
-  animation: Typewriter-cursor 1s infinite;
-  visibility: hidden;
-  margin-left: 1px;
+.hello-title {
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
-@-webkit-keyframes Typewriter-cursor {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes Typewriter-cursor {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+
+.fade-in {
+  -webkit-animation: fade-in-animation 1s ease-in forwards;
+  animation: fade-in-animation 1s ease-in forwards;
+  animation-delay: 2.3s;
+  opacity: 0;
 }

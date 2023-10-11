@@ -1,9 +1,7 @@
 nav {
-  background-color: #000;
   color: aliceblue;
   overflow: hidden;
   padding-right: 5%;
-  height: 10vh;
 }
 
 nav > ul {
@@ -14,7 +12,7 @@ nav > ul {
 .nav-item {
   display: inline-block;
   padding: 0rem 5rem;
-  font-size: small;
+  font-size: medium;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 10px;
