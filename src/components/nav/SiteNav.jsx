@@ -2,7 +2,7 @@ import "./styles.css";
 import { Link } from "react-scroll";
 export default function SiteNav() {
   return (
-    <nav className="site-nav fade-in">
+    <nav className="site-nav descend">
       <ul>
         <li className="nav-item">
           <Link to="experience" smooth={true} duration={500}>

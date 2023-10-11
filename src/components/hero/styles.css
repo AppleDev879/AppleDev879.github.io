@@ -45,6 +45,7 @@
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  display: inline-block;
 }
 
 .hero-button:link {
@@ -154,19 +155,9 @@
     calc(var(--delay) + 2.2s);
 }
 
-@-webkit-keyframes fade-in-animation {
-  from {
-    opacity: 0;
-  }
+@keyframes yTranslateAnimate {
   to {
-    opacity: 1;
-  }
-}
-@keyframes fade-in-animation {
-  from {
-    opacity: 0;
-  }
-  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -177,9 +168,14 @@
   margin-bottom: 2rem;
 }
 
-.fade-in {
-  -webkit-animation: fade-in-animation 1s ease-in forwards;
-  animation: fade-in-animation 1s ease-in forwards;
-  animation-delay: 2.3s;
+.descend {
+  transform: translateY(-25px);
+  animation: yTranslateAnimate 1s forwards 2.3s;
+  opacity: 0;
+}
+
+.ascend {
+  transform: translateY(25px);
+  animation: yTranslateAnimate 1s forwards 2.3s;
   opacity: 0;
 }

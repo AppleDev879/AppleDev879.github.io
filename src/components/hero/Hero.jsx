@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="hero-container">
         <SiteNav />
         <div className="hero-content hero-left">
-          <h2 className="hello-title fade-in">HELLO WORLD! MY NAME IS</h2>
+          <h2 className="hello-title descend">HELLO WORLD! MY NAME IS</h2>
           <div className="signature-container">
             <Signature />
           </div>
@@ -18,7 +18,7 @@ export default function Hero() {
             to="experience"
             smooth={true}
             duration={500}
-            className="hero-button fade-in"
+            className="hero-button ascend"
           >
             See my work
           </Link>
