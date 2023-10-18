@@ -14,9 +14,11 @@ export default function SiteNav() {
             Skills
           </Link>
         </li>
-        {/* <li className="nav-item">
-          <a href="#projects">Projects</a>
-        </li> */}
+        <li className="nav-item">
+          <Link to="projects" smooth={true} duration={500}>
+            Projects
+          </Link>
+        </li>
       </ul>
     </nav>
   );

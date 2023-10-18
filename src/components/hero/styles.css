@@ -2,13 +2,51 @@
 :root {
   --hero-height: 100vh;
 }
-.hero-container {
+
+.background-container {
+  background-color: rgb(86, 86, 86);
+  height: 98vh;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-container::before {
+  content: "";
   background-image: url("https://abarrett-io.nyc3.cdn.digitaloceanspaces.com/hero/Andrew%20Barrett%20Color%201080p.jpg");
-  width: 100vw; /* Use appropriate dimensions */
+  /* background-size: cover; */
+  background-position: center center;
+  /* max-width: 2560px; */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* margin: 0 auto; */
+
+  z-index: 0; /* Places the background behind the container content */
+  opacity: 0; /* Start with an invisible background */
+  animation: fadeIn 1.5s forwards; /* 3s is the duration; adjust as needed */
+}
+
+@media only screen and (max-width: 2100px) {
+  .hero-container::before {
+    background-size: auto 100%;
+  }
+}
+
+.hero-container {
+  width: 100vw; /* Use appropriate dimensions*/
   height: var(--hero-height);
   /* Use appropriate dimensions */
-  background-size: cover;
-  background-position: center;
+  /* max-width: 2560px; */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,12 +54,23 @@
 
 .hero-content {
   z-index: 1;
+  margin-left: 10%;
 }
 
 .signature-container {
   height: 15vh;
-  width: auto;
+  width: 50%;
   margin-bottom: 4vh;
+}
+
+@media only screen and (max-width: 1000px) {
+  .signature-container {
+    width: 70%;
+    max-height: 100px;
+  }
+  .hello-title {
+    font-size: medium;
+  }
 }
 
 .site-nav {
@@ -29,10 +78,6 @@
   top: 0;
   right: 0;
   z-index: 2;
-}
-
-.hero-left {
-  margin-left: 10%;
 }
 
 .hero-button {
@@ -77,7 +122,8 @@
 
 .andrew-barrett {
   height: 100%;
-  display: block;
+  width: 100%;
+  /* max-width: 1000px; */
 }
 
 /* Animation the stroke-dashoffset to a zero length */
@@ -89,7 +135,7 @@
 
 :root {
   --letter-duration: 1s;
-  --delay: 0s;
+  --delay: 1s;
 }
 
 /* Apply the animation to each mask */
@@ -170,12 +216,16 @@
 
 .descend {
   transform: translateY(-25px);
-  animation: yTranslateAnimate 1s forwards 2.3s;
+  animation: yTranslateAnimate 1s forwards 3.8s;
   opacity: 0;
 }
 
 .ascend {
   transform: translateY(25px);
-  animation: yTranslateAnimate 1s forwards 2.3s;
+  animation: yTranslateAnimate 1s forwards 3.8s;
   opacity: 0;
+}
+
+section {
+  padding: 0;
 }

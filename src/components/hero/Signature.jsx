@@ -5,7 +5,8 @@ export default function Signature() {
       id="Andrew_Barrett"
       data-name="Andrew Barrett"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 600 80.43"
+      viewBox="0 0 350 80.43"
+      preserveAspectRatio="xMinYMid meet"
     >
       <title>Andrew Barrett</title>
       <defs>

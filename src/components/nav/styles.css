@@ -25,6 +25,12 @@ nav > ul {
   -moz-transition: all 0.1s linear; /* Firefox */
 }
 
+@media only screen and (max-width: 800px) {
+  .nav-item {
+    padding: 0rem 1rem;
+  }
+}
+
 .nav-item > a {
   color: #fefefe;
   text-decoration: none;
