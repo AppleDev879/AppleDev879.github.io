@@ -19,7 +19,7 @@ export default function Projects() {
       <h1 className="section-title">Projects</h1>
       <div className="grid-container">
         {projects.map((project) => (
-          <ProjectItem project={project} />
+          <ProjectItem key={project.id} project={project} />
         ))}
       </div>
     </section>
